@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FarmTally</title>
+    <script>
+      // GitHub Pages has no server-side rewrites like Firebase's "**" -> /index.html.
+      // This redirects any unknown path back to the app shell with the original
+      // path preserved in a query param, which main.jsx restores on load.
+      var path = window.location.pathname.replace(/^\/farmtally/, '') + window.location.search + window.location.hash
+      window.location.replace('/farmtally/?redirect=' + encodeURIComponent(path))
+    </script>
+  </head>
+  <body></body>
+</html>

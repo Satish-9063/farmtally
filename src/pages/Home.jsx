@@ -1,0 +1,166 @@
+import { Link } from 'react-router-dom'
+import { primaryCta, secondaryCta } from '../config/cta'
+import Logo from '../components/Logo'
+import ChainOfCustody from '../components/ChainOfCustody'
+import CTABand from '../components/CTABand'
+
+const painCards = [
+  {
+    title: 'Procurement leakage',
+    copy: 'Weight and grade recorded at the field rarely match what arrives. Without evidence, every dispute is your word against theirs.',
+  },
+  {
+    title: 'Settlement chaos',
+    copy: 'Advances, deductions, moisture cuts, and transport charges reconciled by hand mean errors, arguments, and delayed farmer payouts.',
+  },
+  {
+    title: 'Zero audit trail',
+    copy: "When an investor or bank asks for records, a stack of registers isn't finance-ready proof.",
+  },
+]
+
+const pillars = [
+  {
+    title: "Records that can't be rewritten",
+    copy: 'Once a weighment, grade, or settlement is finalised, it is permanent. Corrections are added as new entries — the original never disappears.',
+  },
+  {
+    title: 'Prices locked at the handshake',
+    copy: 'The moment a farmer agrees, the price is locked to the millisecond — cryptographically. No quiet revisions after the lorry leaves.',
+  },
+  {
+    title: 'Settlements computed, not negotiated',
+    copy: 'Net payout is calculated automatically from recorded weight, grade, moisture, advances, and deductions. No one can manually override it.',
+  },
+  {
+    title: "Works where the network doesn't",
+    copy: 'Field operators capture weights, moisture, and GPS-tagged photos fully offline. Everything syncs within seconds of the signal returning.',
+  },
+]
+
+export default function Home() {
+  return (
+    <>
+      {/* HERO — mist */}
+      <section className="max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
+        <span className="badge bg-grain/20 text-grain-deep border border-grain/40">
+          <Logo className="w-3.5 h-3.5" />
+          Agri Procurement · Logistics · Services · Settlement
+        </span>
+        <h1 className="font-display text-4xl md:text-6xl mt-6 leading-[1.08] text-canopy max-w-4xl mx-auto">
+          Every kilogram accounted for. Every rupee traceable.
+        </h1>
+        <p className="mt-6 text-ink/70 text-lg max-w-2xl mx-auto leading-relaxed">
+          FarmTally digitises your entire paddy procurement operation — from farm-gate pickup to
+          final farmer settlement — with GPS-tagged evidence, tamper-proof records, and
+          settlements your accountant, your investors, and your farmers can all trust.
+        </p>
+        <div className="mt-9 flex items-center justify-center gap-4">
+          <Link
+            to={primaryCta.href}
+            className="bg-field text-mist font-medium px-6 py-3 rounded-sm hover:bg-canopy transition-colors"
+          >
+            {primaryCta.label}
+          </Link>
+          <Link
+            to={secondaryCta.href}
+            className="text-soil font-medium px-6 py-3 rounded-sm border border-soil/40 hover:bg-soil/5 transition-colors"
+          >
+            {secondaryCta.label}
+          </Link>
+        </div>
+        <p className="mt-5 font-mono text-[13px] text-ink/45">
+          Built for agri-procurement businesses in Andhra Pradesh and across India.
+        </p>
+      </section>
+
+      {/* PROBLEM — soil-deep band (the brown, per your reference) */}
+      <section className="bg-soil-deep text-mist">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <h2 className="font-display text-3xl md:text-4xl max-w-2xl">
+            You know exactly where your paddy leaks. You just can't prove it.
+          </h2>
+          <p className="mt-5 text-mist/70 max-w-2xl leading-relaxed">
+            Between the farm gate and your warehouse, weight goes missing, grades change on
+            paper, advances get double-counted, and settlement disputes drag on for weeks.
+          </p>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {painCards.map((c) => (
+              <div key={c.title} className="rounded-sm p-6 bg-mist/8 border border-mist/15">
+                <div className="font-display text-lg text-grain-light">{c.title}</div>
+                <p className="mt-2 text-[14.5px] text-mist/75 leading-relaxed">{c.copy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SOLUTION / CHAIN OF CUSTODY — mist */}
+      <section>
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <h2 className="font-display text-3xl md:text-4xl text-canopy max-w-2xl">
+            One unbroken digital record — from intent to settlement.
+          </h2>
+          <p className="mt-5 text-ink/70 max-w-2xl leading-relaxed">
+            FarmTally runs your procurement as a controlled, step-by-step workflow. No stage
+            advances without the required approval, GPS-tagged photo evidence, and a locked
+            record.
+          </p>
+          <div className="mt-10">
+            <ChainOfCustody />
+          </div>
+          <Link to="/how-it-works" className="mt-6 inline-block text-field font-medium hover:underline">
+            See how it works →
+          </Link>
+        </div>
+      </section>
+
+      {/* TRUST PILLARS — canopy-deep band */}
+      <section className="bg-canopy-deep text-mist">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <div className="grid md:grid-cols-2 gap-6">
+            {pillars.map((p) => (
+              <div key={p.title} className="p-6 rounded-sm bg-mist/8 border border-mist/15">
+                <div className="font-display text-xl text-grain-light">{p.title}</div>
+                <p className="mt-2 text-[14.5px] text-mist/75 leading-relaxed">{p.copy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AUDIENCE STRIP — mist */}
+      <section>
+        <div className="max-w-6xl mx-auto px-6 py-20 text-center">
+          <h2 className="font-display text-3xl md:text-4xl text-canopy">
+            One platform. Your entire procurement ecosystem.
+          </h2>
+          <p className="mt-5 text-ink/70 max-w-2xl mx-auto leading-relaxed">
+            Your staff, field operators, transport operators, buyers, and investors each get a
+            purpose-built view — while your farmers get complete transparency into every rupee.
+          </p>
+          <Link to="/features" className="mt-5 inline-block text-field font-medium hover:underline">
+            Explore features by role →
+          </Link>
+        </div>
+      </section>
+
+      {/* TRUST BADGES — mist-dark, mixed pill colors */}
+      <section className="hairline bg-mist-dark">
+        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-wrap items-center justify-center gap-3">
+          <span className="badge bg-field/15 text-field border border-field/30">
+            Hosted on Google Cloud, Mumbai region
+          </span>
+          <span className="badge bg-grain/20 text-grain-deep border border-grain/40">
+            DPDPA-compliant — Aadhaar encrypted at rest
+          </span>
+          <span className="badge bg-soil/10 text-soil border border-soil/30">
+            Append-only financial ledger
+          </span>
+        </div>
+      </section>
+
+      <CTABand />
+    </>
+  )
+}
