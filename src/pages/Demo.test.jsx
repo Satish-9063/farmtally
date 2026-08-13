@@ -1,7 +1,15 @@
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
 import { describe, it, expect } from 'vitest'
-import { fieldClass } from './Demo'
+import Demo, { fieldClass } from './Demo'
+
+function renderDemo() {
+  return renderToString(
+    <StaticRouter location="/demo">
+      <Demo />
+    </StaticRouter>
+  )
+}
 
 describe('FTW-009 — semantic color tokens', () => {
   describe('fieldClass', () => {
@@ -25,5 +33,23 @@ describe('FTW-009 — semantic color tokens', () => {
       )
       expect(html).toContain('text-success')
     })
+  })
+})
+
+describe('FTW-039 — Demo.jsx spinner', () => {
+  it('submit button shows idle label by default', () => {
+    const html = renderDemo()
+    expect(html).toContain('Request a demo')
+  })
+
+  it('spinner is absent in idle state', () => {
+    const html = renderDemo()
+    // Loader2 with animate-spin only renders when status === 'submitting'
+    expect(html).not.toContain('animate-spin')
+  })
+
+  it('submit button is a flex container for spinner + label', () => {
+    const html = renderDemo()
+    expect(html).toContain('items-center justify-center gap-2')
   })
 })
