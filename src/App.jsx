@@ -17,6 +17,7 @@ import InvestorRelations from './pages/InvestorRelations'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Legal from './pages/Legal'
+import Accessibility from './pages/Accessibility'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/legal/:page" element={<Legal />} />
+        <Route path="/accessibility" element={<Accessibility />} />
       </Route>
     </Routes>
   )

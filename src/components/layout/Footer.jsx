@@ -45,6 +45,7 @@ export default function Footer() {
             <li><Link to="/legal/terms" className="hover:text-mist">Terms of Service</Link></li>
             <li><Link to="/legal/refunds" className="hover:text-mist">Refund &amp; Cancellation Policy</Link></li>
             <li><Link to="/legal/grievance" className="hover:text-mist">Grievance Officer</Link></li>
+            <li><Link to="/accessibility" className="hover:text-mist">Accessibility Statement</Link></li>
           </ul>
         </div>
       </div>
