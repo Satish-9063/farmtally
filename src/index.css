@@ -11,7 +11,7 @@
    The page alternates mist / soil / canopy bands section to section,
    the way a farm itself isn't one color — so no two adjacent
    sections share a background tone.
-   Numbers still render in IBM Plex Mono per the MKT-WEB-01 voice
+   Numbers still render in Source Code Pro per the MKT-WEB-01 voice
    guide (Section 11).
    ------------------------------------------------------------------ */
 @theme {
@@ -34,9 +34,9 @@
 
   --color-line: #ddd0ac;
 
-  --font-display: "Fraunces", serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Playfair Display", serif;
+  --font-body: "Lato", system-ui, sans-serif;
+  --font-mono: "Source Code Pro", monospace;
 }
 
 html {
