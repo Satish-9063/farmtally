@@ -1,14 +1,10 @@
 import { Link, NavLink } from 'react-router-dom'
 import { primaryCta, secondaryCta } from '../../config/cta'
 import Logo from '../Logo'
+import SolutionsMenu from '../SolutionsMenu'
 
-const links = [
-  { to: '/how-it-works', label: 'Product' },
-  { to: '/features', label: 'Features' },
-  { to: '/pricing', label: 'Pricing' },
-  { to: '/about', label: 'About' },
-  { to: '/blog', label: 'Blog' },
-]
+const navCls = ({ isActive }) =>
+  `hover:text-field transition-colors ${isActive ? 'text-field font-medium' : ''}`
 
 export default function Header() {
   return (
@@ -23,17 +19,11 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-[14.5px] text-ink/80">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) =>
-                `hover:text-field transition-colors ${isActive ? 'text-field font-medium' : ''}`
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
+          <NavLink to="/how-it-works" className={navCls}>Product</NavLink>
+          <SolutionsMenu />
+          <NavLink to="/pricing" className={navCls}>Pricing</NavLink>
+          <NavLink to="/about" className={navCls}>About</NavLink>
+          <NavLink to="/blog" className={navCls}>Blog</NavLink>
         </nav>
 
         <div className="flex items-center gap-3">
