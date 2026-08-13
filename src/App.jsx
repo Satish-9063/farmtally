@@ -6,6 +6,7 @@ import HowItWorks from './pages/HowItWorks'
 import Features from './pages/Features'
 import Solutions from './pages/Solutions'
 import BusinessOwner from './pages/solutions/BusinessOwner'
+import Farmer from './pages/solutions/Farmer'
 import Buyer from './pages/solutions/Buyer'
 import Pricing from './pages/Pricing'
 import Demo from './pages/Demo'
@@ -21,6 +22,7 @@ function App() {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/features" element={<Features />} />
         <Route path="/solutions/business-owner" element={<BusinessOwner />} />
+        <Route path="/solutions/farmer" element={<Farmer />} />
         <Route path="/solutions/buyer" element={<Buyer />} />
         <Route path="/solutions/:role" element={<Solutions />} />
         <Route path="/pricing" element={<Pricing />} />
