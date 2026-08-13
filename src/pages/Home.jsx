@@ -125,6 +125,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUST BADGES — mist-dark, mixed pill colors */}
+      <section className="hairline bg-mist-dark">
+        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-wrap items-center justify-center gap-3">
+          <span className="badge bg-field/15 text-field border border-field/30">
+            Hosted on Google Cloud, Mumbai region
+          </span>
+          <span className="badge bg-grain/20 text-grain-deep border border-grain/40">
+            DPDPA-compliant — Aadhaar encrypted at rest
+          </span>
+          <span className="badge bg-soil/10 text-soil border border-soil/30">
+            Append-only financial ledger
+          </span>
+          <span className="badge bg-canopy/10 text-canopy border border-canopy/30">
+            Fully isolated per business — no cross-account data access
+          </span>
+        </div>
+      </section>
+
       {/* TRUST PILLARS — canopy-deep band */}
       <section className="bg-canopy-deep text-mist">
         <div className="max-w-6xl mx-auto px-6 py-20">
@@ -152,21 +170,6 @@ export default function Home() {
           <Link to="/features" className="mt-5 inline-block text-field font-medium hover:underline">
             Explore features by role →
           </Link>
-        </div>
-      </section>
-
-      {/* TRUST BADGES — mist-dark, mixed pill colors */}
-      <section className="hairline bg-mist-dark">
-        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-wrap items-center justify-center gap-3">
-          <span className="badge bg-field/15 text-field border border-field/30">
-            Hosted on Google Cloud, Mumbai region
-          </span>
-          <span className="badge bg-grain/20 text-grain-deep border border-grain/40">
-            DPDPA-compliant — Aadhaar encrypted at rest
-          </span>
-          <span className="badge bg-soil/10 text-soil border border-soil/30">
-            Append-only financial ledger
-          </span>
         </div>
       </section>
 
