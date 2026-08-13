@@ -9,6 +9,7 @@ import BusinessOwner from './pages/solutions/BusinessOwner'
 import Farmer from './pages/solutions/Farmer'
 import FieldManager from './pages/solutions/FieldManager'
 import Buyer from './pages/solutions/Buyer'
+import InputSupplier from './pages/solutions/InputSupplier'
 import Investor from './pages/solutions/Investor'
 import Pricing from './pages/Pricing'
 import Demo from './pages/Demo'
@@ -27,6 +28,7 @@ function App() {
         <Route path="/solutions/farmer" element={<Farmer />} />
         <Route path="/solutions/field-manager" element={<FieldManager />} />
         <Route path="/solutions/buyer" element={<Buyer />} />
+        <Route path="/solutions/input-supplier" element={<InputSupplier />} />
         <Route path="/solutions/investor" element={<Investor />} />
         <Route path="/solutions/:role" element={<Solutions />} />
         <Route path="/pricing" element={<Pricing />} />
