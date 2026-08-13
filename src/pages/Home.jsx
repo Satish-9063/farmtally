@@ -258,12 +258,20 @@ export default function Home() {
             same audit trail your diligence team would build from scratch — already running in
             production.
           </p>
-          <Link
-            to="/investor-relations"
-            className="mt-9 inline-block bg-field text-mist font-medium px-6 py-3 rounded-sm hover:bg-canopy transition-colors"
-          >
-            Talk to Our Team
-          </Link>
+          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/investor-relations"
+              className="bg-field text-mist font-medium px-6 py-3 rounded-sm hover:bg-canopy transition-colors"
+            >
+              Talk to Our Team
+            </Link>
+            <Link
+              to="/solutions/investor"
+              className="text-mist/70 text-[14px] hover:text-mist transition-colors hover:underline"
+            >
+              See what investors get on FarmTally →
+            </Link>
+          </div>
         </div>
       </motion.section>
 
