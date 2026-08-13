@@ -16,17 +16,17 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="eyebrow text-mist/50 mb-3">Product</div>
+          <div className="eyebrow text-field-light/70 mb-3">Product</div>
           <ul className="space-y-2 text-[14.5px] text-mist/80">
             <li><Link to="/how-it-works" className="hover:text-mist">How It Works</Link></li>
-            <li><Link to="/features" className="hover:text-mist">Features</Link></li>
+            <li><Link to="/features" className="hover:text-mist">Solutions</Link></li>
             <li><Link to="/pricing" className="hover:text-mist">Pricing</Link></li>
             <li><Link to="/blog" className="hover:text-mist">Resources</Link></li>
           </ul>
         </div>
 
         <div>
-          <div className="eyebrow text-mist/50 mb-3">Company</div>
+          <div className="eyebrow text-soil-light/70 mb-3">Company</div>
           <ul className="space-y-2 text-[14.5px] text-mist/80">
             <li>
               <a href="https://sarikitechnologies.com" className="hover:text-mist">
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="eyebrow text-mist/50 mb-3">Legal</div>
+          <div className="eyebrow text-field-light/70 mb-3">Legal</div>
           <ul className="space-y-2 text-[14.5px] text-mist/80">
             <li><Link to="/legal/privacy" className="hover:text-mist">Privacy Notice</Link></li>
             <li><Link to="/legal/terms" className="hover:text-mist">Terms of Service</Link></li>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-mist/15">
+      <div className="border-t border-soil-light/20">
         <div className="max-w-6xl mx-auto px-6 py-5 text-[12.5px] text-mist/50">
           © 2026 Sariki Technologies Pvt Ltd, Visakhapatnam, Andhra Pradesh. FarmTally is a
           product of Sariki Technologies. Built and hosted in India. DPDPA-compliant.
