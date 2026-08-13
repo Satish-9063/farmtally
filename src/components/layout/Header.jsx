@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import { primaryCta, secondaryCta } from '../../config/cta'
 import Logo from '../Logo'
 
@@ -48,9 +49,10 @@ export default function Header() {
           </Link>
           <Link
             to={primaryCta.href}
-            className="bg-canopy text-mist text-[14px] font-medium px-4 py-2 rounded-sm hover:bg-field transition-colors"
+            className="bg-canopy text-mist text-[14px] font-medium px-4 py-2 rounded-sm hover:bg-field transition-colors inline-flex items-center gap-1.5"
           >
             {primaryCta.label}
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </div>
