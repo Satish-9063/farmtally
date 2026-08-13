@@ -15,7 +15,7 @@ export default function CTABand() {
         <div className="mt-8 flex items-center justify-center gap-4">
           <Link
             to={primaryCta.href}
-            className="bg-grain text-canopy-deep font-semibold px-6 py-3 rounded-sm hover:bg-grain-light transition-colors"
+            className="bg-field text-mist font-semibold px-6 py-3 rounded-sm hover:bg-canopy transition-colors"
           >
             {primaryCta.label}
           </Link>
