@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Loader2 } from 'lucide-react'
 
 const COMMODITIES = [
   'Paddy', 'Maize', 'Groundnut', 'Cotton', 'Sunflower',
@@ -274,8 +275,11 @@ export default function Demo() {
           <button
             type="submit"
             disabled={!fields.consent || status === 'submitting'}
-            className="mt-2 w-full bg-canopy text-mist font-semibold py-3 rounded-sm transition-colors hover:bg-canopy-deep disabled:opacity-40 disabled:cursor-not-allowed"
+            className="mt-2 w-full flex items-center justify-center gap-2 bg-canopy text-mist font-semibold py-3 rounded-sm transition-colors hover:bg-canopy-deep disabled:opacity-40 disabled:cursor-not-allowed"
           >
+            {status === 'submitting' && (
+              <Loader2 size={16} className="animate-spin" aria-hidden="true" />
+            )}
             {status === 'submitting' ? 'Sending…' : 'Request a demo'}
           </button>
 
