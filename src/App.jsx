@@ -13,6 +13,7 @@ import InputSupplier from './pages/solutions/InputSupplier'
 import Investor from './pages/solutions/Investor'
 import Pricing from './pages/Pricing'
 import Demo from './pages/Demo'
+import InvestorRelations from './pages/InvestorRelations'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Legal from './pages/Legal'
@@ -33,6 +34,7 @@ function App() {
         <Route path="/solutions/:role" element={<Solutions />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/demo" element={<Demo />} />
+        <Route path="/investor-relations" element={<InvestorRelations />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/legal/:page" element={<Legal />} />
