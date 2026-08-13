@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import { motion, useReducedMotion } from 'framer-motion'
+import {
+  Leaf, ClipboardList, Truck, ShoppingCart, Package, Wrench, TrendingUp,
+} from 'lucide-react'
 import { primaryCta, secondaryCta } from '../config/cta'
 import Logo from '../components/Logo'
 import ChainOfCustody from '../components/ChainOfCustody'
@@ -38,7 +42,21 @@ const pillars = [
   },
 ]
 
+// ADR-006 canonical role list minus Business Owner (who pays).
+// All ecosystem members access FarmTally at Rs 0 (ADR-004).
+const ECOSYSTEM_ROLES = [
+  { label: 'Farmer',             Icon: Leaf },
+  { label: 'Field Manager',      Icon: ClipboardList },
+  { label: 'Transport Operator', Icon: Truck },
+  { label: 'Buyer',              Icon: ShoppingCart },
+  { label: 'Input Supplier',     Icon: Package },
+  { label: 'Equipment Provider', Icon: Wrench },
+  { label: 'Investor',           Icon: TrendingUp },
+]
+
 export default function Home() {
+  const prefersReducedMotion = useReducedMotion()
+
   return (
     <>
       {/* HERO — mist */}
@@ -170,6 +188,55 @@ export default function Home() {
           <Link to="/features" className="mt-5 inline-block text-field font-medium hover:underline">
             Explore features by role →
           </Link>
+        </div>
+      </section>
+
+      {/* FREE-FOR-ECOSYSTEM — canopy band (Zero-Cost Ecosystem Access, ADR-004) */}
+      <section className="bg-canopy text-mist">
+        <div className="max-w-5xl mx-auto px-6 py-20 text-center">
+          <p className="eyebrow text-grain-light mb-10">Zero-Cost Ecosystem Access</p>
+
+          {/* Rs 0 badge — Type B subtle pulse (scale) */}
+          <motion.div
+            role="img"
+            aria-label="Rs 0 — free for all ecosystem roles"
+            animate={prefersReducedMotion ? {} : { scale: [1, 1.04, 1] }}
+            transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut', repeatDelay: 1.5 }}
+            className="inline-flex items-end gap-2 mb-4"
+          >
+            <span className="font-mono text-2xl text-mist/40 mb-5 leading-none select-none">
+              Rs
+            </span>
+            <span className="font-display text-[9rem] md:text-[11rem] leading-none text-grain-light">
+              0
+            </span>
+          </motion.div>
+
+          <p className="eyebrow text-mist/40 mb-14">per ecosystem member · per month · forever</p>
+
+          {/* Role icons — all SOLUTIONS_ROLES except Business Owner */}
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 mb-16">
+            {ECOSYSTEM_ROLES.map(({ label, Icon }) => (
+              <div key={label} className="flex flex-col items-center gap-2 w-24">
+                <div className="w-14 h-14 rounded-full bg-mist/10 border border-mist/15 flex items-center justify-center">
+                  <Icon size={24} className="text-grain-light" aria-hidden="true" />
+                </div>
+                <span className="font-mono text-[10px] font-bold text-grain tracking-widest">
+                  FREE
+                </span>
+                <span className="text-[12.5px] text-mist/65 leading-tight text-center">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Closing line — SOW Phase 6 Step 5 */}
+          <p className="max-w-2xl mx-auto text-[16.5px] text-mist/75 leading-relaxed">
+            Every farmer, field team, transporter, buyer, and service partner in your network
+            joins FarmTally at no cost. Your subscription funds the entire procurement
+            ecosystem — not just your own seat at the table.
+          </p>
         </div>
       </section>
 
