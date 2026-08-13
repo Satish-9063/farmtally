@@ -240,6 +240,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INVESTOR BAND — bg-inverse, Type C fade/slide (ADR-010) */}
+      <motion.section
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
+        whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="bg-inverse text-mist"
+      >
+        <div className="max-w-4xl mx-auto px-6 py-20 text-center">
+          <p className="eyebrow text-grain-light mb-4">For Investors</p>
+          <h2 className="font-display text-3xl md:text-4xl">
+            Every claim in this pitch is backed by a record, not a promise.
+          </h2>
+          <p className="mt-5 text-mist/70 max-w-2xl mx-auto leading-relaxed">
+            Append-only ledgers, GPS-tagged evidence, and tamper-proof settlements give you the
+            same audit trail your diligence team would build from scratch — already running in
+            production.
+          </p>
+          <Link
+            to="/investor-relations"
+            className="mt-9 inline-block bg-field text-mist font-medium px-6 py-3 rounded-sm hover:bg-canopy transition-colors"
+          >
+            Talk to Our Team
+          </Link>
+        </div>
+      </motion.section>
+
       <CTABand />
     </>
   )
