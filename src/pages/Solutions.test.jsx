@@ -43,3 +43,27 @@ describe('FTW-028 — Transport Operator Solutions page', () => {
     expect(html).not.toContain('Deliver with a record')
   })
 })
+
+describe('FTW-031 — Equipment Provider Solutions page', () => {
+  it('renders the locked H1 for /solutions/equipment-provider', () => {
+    const html = render('/solutions/equipment-provider')
+    expect(html).toContain('Service completed, visible, and accounted for')
+  })
+
+  it('renders the role eyebrow', () => {
+    const html = render('/solutions/equipment-provider')
+    expect(html).toContain('Solutions · Equipment Provider')
+  })
+
+  it('wires the role photo from /images/solutions/', () => {
+    const html = render('/solutions/equipment-provider')
+    expect(html).toContain('/images/solutions/equipment-provider.jpg')
+  })
+
+  it('renders all three value proposition headings', () => {
+    const html = render('/solutions/equipment-provider')
+    expect(html).toContain('Every booking tied to a live job')
+    expect(html).toContain('Field-confirmed delivery and return')
+    expect(html).toContain('Invoiced on verified hours, not estimates')
+  })
+})
