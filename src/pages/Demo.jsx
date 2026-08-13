@@ -24,11 +24,11 @@ const EMPTY = {
   consent: false,
 }
 
-function fieldClass(error) {
+export function fieldClass(error) {
   return [
     'w-full border rounded-sm px-4 py-2.5 text-[15px] bg-mist text-ink placeholder:text-ink/35',
     'focus:outline-none focus:ring-2 focus:ring-field transition-colors',
-    error ? 'border-soil' : 'border-line',
+    error ? 'border-error' : 'border-line',
   ].join(' ')
 }
 
@@ -77,6 +77,7 @@ export default function Demo() {
     return (
       <main className="bg-mist">
         <div className="max-w-xl mx-auto px-6 py-24 text-center">
+          <p className="eyebrow text-success mb-3">Submitted</p>
           <p className="font-display text-3xl text-canopy-deep leading-snug">
             Thank you! Our team will call you within one working day.
           </p>
@@ -106,8 +107,8 @@ export default function Demo() {
         </p>
 
         {status === 'offline' && (
-          <div className="mt-8 border-l-4 border-soil bg-soil/10 px-5 py-4 rounded-sm">
-            <p className="font-mono text-[13px] text-soil">
+          <div className="mt-8 border-l-4 border-error bg-error/10 px-5 py-4 rounded-sm">
+            <p className="font-mono text-[13px] text-error">
               You appear to be offline. Your details are safe in this form — reconnect and press
               Send again.
             </p>
@@ -119,7 +120,7 @@ export default function Demo() {
           {/* Name */}
           <div className="flex flex-col gap-1">
             <label className="text-[13px] font-semibold text-canopy">
-              Full name <span className="text-soil">*</span>
+              Full name <span className="text-error">*</span>
             </label>
             <input
               type="text"
@@ -128,13 +129,13 @@ export default function Demo() {
               placeholder="Your name"
               className={fieldClass(errors.name)}
             />
-            {errors.name && <p className="text-[12px] text-soil">{errors.name}</p>}
+            {errors.name && <p className="text-[12px] text-error">{errors.name}</p>}
           </div>
 
           {/* Business name */}
           <div className="flex flex-col gap-1">
             <label className="text-[13px] font-semibold text-canopy">
-              Business name <span className="text-soil">*</span>
+              Business name <span className="text-error">*</span>
             </label>
             <input
               type="text"
@@ -143,14 +144,14 @@ export default function Demo() {
               placeholder="Your business or trade name"
               className={fieldClass(errors.businessName)}
             />
-            {errors.businessName && <p className="text-[12px] text-soil">{errors.businessName}</p>}
+            {errors.businessName && <p className="text-[12px] text-error">{errors.businessName}</p>}
           </div>
 
           {/* Phone + Email side by side on desktop */}
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-1">
               <label className="text-[13px] font-semibold text-canopy">
-                Mobile number <span className="text-soil">*</span>
+                Mobile number <span className="text-error">*</span>
               </label>
               <input
                 type="tel"
@@ -159,11 +160,11 @@ export default function Demo() {
                 placeholder="10-digit mobile"
                 className={fieldClass(errors.phone)}
               />
-              {errors.phone && <p className="text-[12px] text-soil">{errors.phone}</p>}
+              {errors.phone && <p className="text-[12px] text-error">{errors.phone}</p>}
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-[13px] font-semibold text-canopy">
-                Email <span className="text-soil">*</span>
+                Email <span className="text-error">*</span>
               </label>
               <input
                 type="email"
@@ -172,7 +173,7 @@ export default function Demo() {
                 placeholder="you@business.com"
                 className={fieldClass(errors.email)}
               />
-              {errors.email && <p className="text-[12px] text-soil">{errors.email}</p>}
+              {errors.email && <p className="text-[12px] text-error">{errors.email}</p>}
             </div>
           </div>
 
@@ -180,7 +181,7 @@ export default function Demo() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-1">
               <label className="text-[13px] font-semibold text-canopy">
-                State <span className="text-soil">*</span>
+                State <span className="text-error">*</span>
               </label>
               <select
                 value={fields.state}
@@ -191,11 +192,11 @@ export default function Demo() {
                   <option key={s} value={s}>{s}</option>
                 ))}
               </select>
-              {errors.state && <p className="text-[12px] text-soil">{errors.state}</p>}
+              {errors.state && <p className="text-[12px] text-error">{errors.state}</p>}
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-[13px] font-semibold text-canopy">
-                District <span className="text-soil">*</span>
+                District <span className="text-error">*</span>
               </label>
               <input
                 type="text"
@@ -204,7 +205,7 @@ export default function Demo() {
                 placeholder="e.g. Srikakulam"
                 className={fieldClass(errors.district)}
               />
-              {errors.district && <p className="text-[12px] text-soil">{errors.district}</p>}
+              {errors.district && <p className="text-[12px] text-error">{errors.district}</p>}
             </div>
           </div>
 
