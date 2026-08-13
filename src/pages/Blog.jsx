@@ -1,3 +1,5 @@
+import BeforeAfterDiagram from '../components/BeforeAfterDiagram'
+
 const articles = [
   {
     title: 'Where paddy procurement actually leaks — and how digital chain-of-custody stops it',
@@ -27,6 +29,10 @@ export default function Blog() {
         <h1 className="font-display text-4xl md:text-5xl text-canopy-deep leading-tight">
           Notes from the field.
         </h1>
+
+        <div className="mt-14">
+          <BeforeAfterDiagram />
+        </div>
 
         <ol className="mt-14 flex flex-col divide-y divide-line">
           {articles.map((article, i) => (
