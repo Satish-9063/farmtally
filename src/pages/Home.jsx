@@ -48,12 +48,13 @@ export default function Home() {
           Agri Procurement · Logistics · Services · Settlement
         </span>
         <h1 className="font-display text-4xl md:text-6xl mt-6 leading-[1.08] text-canopy max-w-4xl mx-auto">
-          Every kilogram accounted for. Every rupee traceable.
+          The settlement layer for agri-procurement.
         </h1>
         <p className="mt-6 text-ink/70 text-lg max-w-2xl mx-auto leading-relaxed">
-          FarmTally digitises your entire paddy procurement operation — from farm-gate pickup to
-          final farmer settlement — with GPS-tagged evidence, tamper-proof records, and
-          settlements your accountant, your investors, and your farmers can all trust.
+          FarmTally unifies agri-procurement operations and agri-fintech infrastructure —
+          GPS-tagged evidence, tamper-proof records, and automated settlements that turn every
+          transaction into finance-ready data your accountant, your investors, and your farmers
+          can all trust.
         </p>
         <div className="mt-9 flex items-center justify-center gap-4">
           <Link
@@ -72,6 +73,15 @@ export default function Home() {
         <p className="mt-5 font-mono text-[13px] text-ink/45">
           Built for agri-procurement businesses in Andhra Pradesh and across India.
         </p>
+        <div className="mt-12 rounded-sm overflow-hidden border border-line">
+          <img
+            src="/images/hero/hero-bg.jpg"
+            alt="Agri-procurement operations on the ground"
+            width={1920}
+            height={1080}
+            className="w-full h-auto object-cover"
+          />
+        </div>
       </section>
 
       {/* PROBLEM — soil-deep band (the brown, per your reference) */}
