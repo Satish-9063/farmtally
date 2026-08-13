@@ -80,7 +80,7 @@ const faqs = [
   },
   {
     q: 'Who else can see my data?',
-    a: "No one. Every business on FarmTally is an isolated tenant. Sariki Technologies' platform operations team cannot access your operational or financial data.",
+    a: 'No one outside your account. Every business on FarmTally is an isolated tenant — your operational and financial records are visible only to the roles you have authorised within your own account.',
   },
   {
     q: 'What do I need to sign up?',
