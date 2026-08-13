@@ -39,6 +39,11 @@
   --color-error: #A34A2E;   /* terracotta – muted red-brown, brand primary */
   --color-success: #5B6B3F; /* olive – brand secondary */
 
+  /* near-black neutral, not brand-tinted — for sections that need to
+     read as distinct from the canopy/soil dark bands (ADR-010) */
+  --color-inverse: #15150f;
+  --color-inverse-deep: #0a0a07;
+
   --font-display: "Playfair Display", serif;
   --font-body: "Lato", system-ui, sans-serif;
   --font-mono: "Source Code Pro", monospace;
