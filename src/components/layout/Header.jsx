@@ -20,11 +20,11 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-[14.5px] text-ink/80">
-          <NavLink to="/how-it-works" className={navCls}>Product</NavLink>
+          <NavLink to="/how-it-works" className={navCls}>How It Works</NavLink>
           <SolutionsMenu />
           <NavLink to="/pricing" className={navCls}>Pricing</NavLink>
           <NavLink to="/about" className={navCls}>About</NavLink>
-          <NavLink to="/blog" className={navCls}>Blog</NavLink>
+          <NavLink to="/blog" className={navCls}>Resources</NavLink>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -35,7 +35,7 @@ export default function Header() {
             to={secondaryCta.href}
             className="hidden sm:inline text-[14px] text-ink/80 hover:text-field transition-colors"
           >
-            {secondaryCta.label}
+            Get Started
           </Link>
           <Link
             to={primaryCta.href}
