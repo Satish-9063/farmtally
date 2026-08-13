@@ -35,6 +35,10 @@
 
   --color-line: #ddd0ac;
 
+  /* semantic roles */
+  --color-error: #A34A2E;   /* terracotta – muted red-brown, brand primary */
+  --color-success: #5B6B3F; /* olive – brand secondary */
+
   --font-display: "Playfair Display", serif;
   --font-body: "Lato", system-ui, sans-serif;
   --font-mono: "Source Code Pro", monospace;
