@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Package, Wrench } from 'lucide-react'
 import ChainOfCustody from '../components/ChainOfCustody'
 import CTABand from '../components/CTABand'
@@ -67,7 +68,11 @@ export default function HowItWorks() {
             Most tools record what you type. FarmTally enforces what must be true: moisture before
             weight, evidence before transit, verification before settlement, and a ledger no one can
             edit after the fact. That discipline is what makes your records worth something — to a
-            bank, to an investor, and to every farmer who works with you.
+            bank, to{' '}
+            <Link to="/solutions/investor" className="text-grain-light hover:underline">
+              an investor
+            </Link>
+            , and to every farmer who works with you.
           </p>
         </div>
       </section>

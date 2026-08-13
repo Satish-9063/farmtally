@@ -36,7 +36,7 @@ const roles = [
   { name: 'Buyer',              desc: 'Warehouse verification against farm-gate records, with photo evidence and a 24-hour confirmation SLA.' },
   { name: 'Input Supplier',     desc: 'Platform visibility into the operations they support, without access to settlement or financial records.' },
   { name: 'Equipment Provider', desc: 'Platform visibility into the operations they support, without access to settlement or financial records.' },
-  { name: 'Investor',           desc: 'Hardcoded read-only console — operational metrics and settlement records, with hard data-security boundaries.' },
+  { name: 'Investor', to: '/solutions/investor', desc: 'Hardcoded read-only console — operational metrics and settlement records, with hard data-security boundaries.' },
 ]
 
 const trust = [
@@ -122,7 +122,10 @@ export default function About() {
                 <li key={r.name} className="flex gap-4">
                   <span className="mt-[6px] shrink-0 w-[6px] h-[6px] rounded-full bg-field-light" />
                   <div>
-                    <span className="font-display text-[16px] text-canopy">{r.name}</span>
+                    {r.to
+                    ? <Link to={r.to} className="font-display text-[16px] text-canopy hover:text-field">{r.name}</Link>
+                    : <span className="font-display text-[16px] text-canopy">{r.name}</span>
+                  }
                     <span className="text-ink/50 mx-2">—</span>
                     <span className="text-[15px] text-ink/70">{r.desc}</span>
                   </div>
