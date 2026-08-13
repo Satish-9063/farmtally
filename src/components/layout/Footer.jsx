@@ -21,7 +21,7 @@ export default function Footer() {
             <li><Link to="/how-it-works" className="hover:text-mist">How It Works</Link></li>
             <li><Link to="/features" className="hover:text-mist">Features</Link></li>
             <li><Link to="/pricing" className="hover:text-mist">Pricing</Link></li>
-            <li><Link to="/blog" className="hover:text-mist">Blog</Link></li>
+            <li><Link to="/blog" className="hover:text-mist">Resources</Link></li>
           </ul>
         </div>
 
