@@ -7,4 +7,8 @@ const base = process.env.GITHUB_ACTIONS ? '/farmtally/' : '/'
 export default defineConfig({
   base,
   plugins: [react(), tailwindcss()],
+  test: {
+    environment: 'node',
+    globals: true,
+  },
 })

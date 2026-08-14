@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------
-   FarmTally design tokens — a full harvest palette, not a green
-   monochrome. Named after the farm itself:
+   FarmTally design tokens — names kept from the original harvest
+   palette, values remapped to the ADR-005 brand palette (Terracotta
+   primary #A34A2E, Olive secondary #5B6B3F):
      mist   – early-morning field-paper (warm cream, base background)
-     canopy – deep tree-canopy green (dark band sections, headings)
-     field  – open-field green (mid accent, links, icons)
-     grain  – ripe-wheat gold (badges, highlight buttons, numerals)
-     soil   – turned-earth brown (alternate dark band, secondary CTA)
+     canopy – deep terracotta (dark band sections, headings)
+     field  – terracotta (mid accent, links, icons)
+     grain  – bright olive (badges, highlight buttons, numerals)
+     soil   – olive (alternate dark band, secondary CTA)
    The page alternates mist / soil / canopy bands section to section,
    the way a farm itself isn't one color — so no two adjacent
    sections share a background tone.
-   Numbers still render in IBM Plex Mono per the MKT-WEB-01 voice
+   Numbers still render in Source Code Pro per the MKT-WEB-01 voice
    guide (Section 11).
    ------------------------------------------------------------------ */
 @theme {
@@ -19,24 +20,33 @@
   --color-mist-dark: #ece2c9;
   --color-ink: #2a2b1f;
 
-  --color-canopy: #1e3324;
-  --color-canopy-deep: #142419;
-  --color-field: #5b8c5a;
-  --color-field-light: #a9c98f;
+  --color-canopy: #642d1c;
+  --color-canopy-deep: #3c1b11;
+  --color-field: #a34a2e;
+  --color-field-light: #d88b74;
 
-  --color-soil: #6b4a34;
-  --color-soil-deep: #46301f;
-  --color-soil-light: #a9805f;
+  --color-soil: #5b6b3f;
+  --color-soil-deep: #313a22;
+  --color-soil-light: #94aa6e;
 
-  --color-grain: #d9a441;
-  --color-grain-deep: #a97416;
-  --color-grain-light: #f0cc84;
+  --color-grain: #81a63f;
+  --color-grain-deep: #475c23;
+  --color-grain-light: #bcd590;
 
   --color-line: #ddd0ac;
 
-  --font-display: "Fraunces", serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  /* semantic roles */
+  --color-error: #A34A2E;   /* terracotta – muted red-brown, brand primary */
+  --color-success: #5B6B3F; /* olive – brand secondary */
+
+  /* near-black neutral, not brand-tinted — for sections that need to
+     read as distinct from the canopy/soil dark bands (ADR-010) */
+  --color-inverse: #15150f;
+  --color-inverse-deep: #0a0a07;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Lato", system-ui, sans-serif;
+  --font-mono: "Source Code Pro", monospace;
 }
 
 html {

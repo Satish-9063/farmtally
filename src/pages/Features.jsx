@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const roles = [
   {
     name: 'Business Owners',
@@ -39,6 +41,7 @@ const roles = [
   {
     name: 'Investors',
     subtitle: 'read-only, always',
+    to: '/solutions/investor',
     bullets: [
       'A hardcoded read-only console: operational metrics and settlement records, with hard data-security boundaries.',
       'Append-only ledger gives investor-grade audit visibility — the records a financing decision can actually rely on.',
@@ -86,6 +89,11 @@ export default function Features() {
                   </li>
                 ))}
               </ul>
+              {role.to && (
+                <Link to={role.to} className="mt-1 text-[13.5px] text-field hover:underline">
+                  See the full investor view →
+                </Link>
+              )}
             </div>
           ))}
         </div>

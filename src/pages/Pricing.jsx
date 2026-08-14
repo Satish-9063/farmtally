@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Token = ({ children }) => (
   <span className="font-mono text-soil text-[13px]">{children}</span>
 )
@@ -32,6 +34,7 @@ const plans = [
   {
     id: 'ENTERPRISE',
     tagline: 'For multi-district operations with investor reporting.',
+    taglineHref: '/solutions/investor',
     price: "⟦OQ-14: ENTERPRISE Rs/mo — or 'Talk to us'⟧",
     rows: [
       { label: 'Field operators', value: '⟦OQ-14: FM cap⟧' },
@@ -80,7 +83,7 @@ const faqs = [
   },
   {
     q: 'Who else can see my data?',
-    a: "No one. Every business on FarmTally is an isolated tenant. Sariki Technologies' platform operations team cannot access your operational or financial data.",
+    a: 'No one outside your account. Every business on FarmTally is an isolated tenant — your operational and financial records are visible only to the roles you have authorised within your own account.',
   },
   {
     q: 'What do I need to sign up?',
@@ -115,7 +118,12 @@ export default function Pricing() {
             <div key={plan.id} className="stub rounded-sm p-7 flex flex-col gap-5">
               <div>
                 <p className="eyebrow text-field">{plan.id}</p>
-                <p className="mt-2 text-[14px] text-ink/60 leading-snug">{plan.tagline}</p>
+                <p className="mt-2 text-[14px] text-ink/60 leading-snug">
+                  {plan.tagline}
+                  {plan.taglineHref && (
+                    <> <Link to={plan.taglineHref} className="text-field hover:underline">Learn more →</Link></>
+                  )}
+                </p>
               </div>
 
               <div>

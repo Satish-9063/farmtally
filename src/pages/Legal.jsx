@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 const titles = {
   privacy: 'Privacy Notice',
   terms: 'Terms of Service',
+  cookies: 'Cookie Policy',
   refunds: 'Refund & Cancellation Policy',
   grievance: 'Grievance Officer',
 }
@@ -40,6 +41,29 @@ const content = {
     {
       heading: 'Platform privacy',
       body: 'Farmer PII (Aadhaar, bank details) is encrypted at rest and never appears in reports, exports, or logs. Bank details are visible only to roles with an explicit business need. Every business on FarmTally is an isolated tenant — no cross-tenant data access is possible.',
+    },
+  ],
+
+  cookies: [
+    {
+      heading: 'What we store',
+      body: 'FarmTally uses browser localStorage rather than HTTP cookies for consent tracking. A single entry is written when you make a choice on the consent banner.',
+    },
+    {
+      heading: 'Essential storage',
+      body: <>Always active — cannot be disabled. The {tok('farmtally_consent')} entry records whether you have accepted or declined analytics. Without it the consent banner would reappear on every page load.</>,
+    },
+    {
+      heading: 'Analytics',
+      body: <>Active only when {tok('farmtally_consent')} is set to {tok('allowed')}. We load privacy-respecting analytics that record pages visited, time on page, and referrer. No personally identifiable information is collected. No cross-site tracking or advertising profiles are built.</>,
+    },
+    {
+      heading: 'Marketing',
+      body: 'No marketing or advertising cookies, pixels, or trackers are loaded on this website.',
+    },
+    {
+      heading: 'Withdrawing consent',
+      body: <>To withdraw analytics consent, open your browser developer tools (F12 or Cmd-Option-I), go to Application → Local Storage → this site, and delete the {tok('farmtally_consent')} entry. The consent banner will reappear on your next page load and you can make a fresh choice.</>,
     },
   ],
 
